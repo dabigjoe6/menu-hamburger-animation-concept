@@ -1,0 +1,148 @@
+html {
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	padding: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+}
+
+.hamburger-container {
+	width: 150px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hamburger-cross-container {
+	position: absolute;
+	bottom: 50%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.hamburger-container:hover>p {
+	color: white;
+}
+
+.hamburger-container:active>p {
+	color: yellow;
+}
+
+.hamburger-container:hover .hamburger-cross {
+	height: 100%;
+}
+
+.hamburger-container:hover .hamburger-bar {
+	width: 100%;
+}
+
+.hamburger-container:active .cross-wrapper-1 {
+	transform: rotate(45deg);
+}
+
+.hamburger-container:active .cross-wrapper-2 {
+	transform: rotate(-45deg);
+}
+
+.hamburger-container:active .hamburger-bar-wrapper {
+	opacity: 0;
+}
+
+.hamburger-container:active .bar-wrapper-1 {
+	transform: rotate(-45deg);
+}
+
+.hamburger-container:active .bar-wrapper-3 {
+	transform: rotate(45deg);
+}
+
+.hamburger-container>p {
+	color: grey;
+	letter-spacing: 5px;
+	transition: color;
+	transition-duration: 1s;
+}
+
+.hamburger-bar-container {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hamburger-bar-wrapper {
+	background-color: gold;
+	width: 100px;
+	height: 4px;
+	transform-origin: right;
+	opacity: 1;
+	transition: transform, opacity;
+	transition-duration: 0.3s;
+}
+
+.hamburger-bar {
+	height: 4px;
+	width: 0%;
+	background-color: red;
+	transition: width;
+	transition-duration: 1s;
+}
+
+.hamburger-bar-1 {
+	width: 100%;
+}
+
+.hamburger-bar-2 {
+	width: 40%;
+}
+
+.hamburger-bar-3 {
+	width: 0%;
+}
+
+.hamburger-cross-container .hamburger-cross-wrapper {
+	background-color: black;
+	height: 100px;
+	position: absolute;
+	right: 50%;
+	transition: transform;
+	transform: rotate(90deg);
+	transition-duration: 1s;
+}
+
+.hamburger-cross {
+	width: 4px;
+	background-color: red;
+	transition: height;
+	transition-duration: 1s;
+}
+
+.hamburger-cross-1 {
+	height: 100%;
+}
+
+.hamburger-cross-2 {
+	height: 40%;
+}
+
+.hamburger-cross-3 {
+	height: 0%;
+}
